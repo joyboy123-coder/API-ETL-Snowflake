@@ -6,7 +6,7 @@ import random
 from snowflake.connector.pandas_tools import write_pandas
 
 logging.basicConfig(
-    filename='etl.log',
+    filename='logfile.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
