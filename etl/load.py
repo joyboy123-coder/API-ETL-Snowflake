@@ -13,12 +13,11 @@ account = input('🏢 Enter your Snowflake Account: ')
 warehouse = input('📦 Enter your Warehouse: ')
 database = input('🗃️ Enter your Database Name: ')
 schema = input('📂 Enter your Schema Name: ')
-table = input('📋 Enter your Table Name: ')
 print()
 
 def load(df, table_name):
     try:
-        logging.info("🔗 Connecting to Snowflake...")
+        logging.info("Connecting to Snowflake...")
         conn = snowflake.connector.connect(
             user=user,
             password=password,
@@ -28,7 +27,7 @@ def load(df, table_name):
             schema=schema
         )
         
-        logging.info("📤 Loading Cleaned Data into Snowflake...")
+        logging.info("Loading Cleaned Data into Snowflake...")
         success, nchunks, nrows, _ = write_pandas(
             conn=conn,
             df=df,
@@ -39,14 +38,14 @@ def load(df, table_name):
         )
 
         if success:
-            logging.info(f"✅ Uploaded {nrows} rows in Snowflake.")
+            logging.info(f"Uploaded {nrows} rows in Snowflake.")
         else:
             logging.error("Upload failed.")
     
     except Exception as e:
-        logging.error(f"⚠️ Failed to load data into Snowflake: {e}")
+        logging.error(f"Failed to load data into Snowflake: {e}")
         raise
 
     finally:
-        logging.info('Data Loading Completed ✅')
+        logging.info('Data Loading Completed')
         logging.info('--------------------------------------------\n')

@@ -1,0 +1,5 @@
+# Data manipulation library
+pandas
+
+# Snowflake Python connector (includes tools like write_pandas)
+snowflake-connector-python
