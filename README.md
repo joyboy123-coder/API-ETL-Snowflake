@@ -1,4 +1,4 @@
-# 🚀 ETL API Snowflake ❄️  
+# 🚀 API ETL Snowflake ❄️  
 
 
 ![ETL API Snowflake Thumbnail](images/thumbnail/thumbnail_image.png)
