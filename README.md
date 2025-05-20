@@ -1,4 +1,8 @@
 # 🚀 ETL API Snowflake ❄️  
+
+
+![ETL API Snowflake Thumbnail](images/thumbnail/thumbnail_image.png)
+
 > A complete end-to-end ETL pipeline to extract data from a public API, clean it using Python, and load it into Snowflake — with logging, visual proof, and modular scripts!  
 
 ---
